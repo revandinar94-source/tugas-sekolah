@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kos Bahagia</title>
+    <style>
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: #111;
+    color: #fff;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .marquee__inner {
+    display: inline-block;
+    padding-left: 100%; /* start dari luar kanan */
+    animation: marquee 12s linear infinite;
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+  }
+
+  /* pause on hover */
+  .marquee:hover .marquee__inner {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+    <h2 align="center">Kos bahagia 1 dan 2</h2>
+    <h3 align="center">Alamat Kos 1: Gedokan RT 03, Sumber mulyo Bambang lipuro Bantul, Kode pos (3345)</h3>
+    <h3 align="center">Alamat kos 2: Gunungan RT 06, Sumbermulyo Babmbangkiouro Bantul, Kode pos (3377)</h3>
+    <hr>
+    <img src="">
+    <h3>Maps kos 1</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1490.5205560367717!2d110.31964241640266!3d-7.920440178984799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7affd5695dc62d%3A0x724f5e1dd6808d2d!2sKost%20BAHAGIA!5e1!3m2!1sen!2sid!4v1759621635494!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <hr>
+    <h3>Maps kos 2</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425.18902254827594!2d110.32272958121351!3d-7.919333170811065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aff6ebd4240f1%3A0xe5b8e4f3628a3058!2sKos%20BAHAGIA%202!5e1!3m2!1sen!2sid!4v1759621191380!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <hr>
+    <div align="center">
+      <a href="next.html" name="next">next</a>
+    </div>
+    <div class="marquee" aria-label="Teks berjalan">
+  <div class="marquee__inner">🔔 Information: Website ini dalam pengenmabangan</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Gambar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .gallery-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 10px;
+      text-align: center;
+      background: #fafafa;
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Daftar Gambar</h1>
+
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="RUMAH 1.JPG">
+      <div class="caption">KOST</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="RUMAH 2.jpg">
+      <div class="caption">KAMAR</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="gambar3.jpg">
+      <div class="caption">PARKIRAN</div>
+    </div>
+
+    <div class="gallery-item">
+      <img src="gambar4.jpg">
+      <div class="caption">DAPUR UMUM</div>
+    </div>
+  </div>
+  <iframe src="" allowfullscreen="" loading="lazy" width="100" height="200"></iframe>
+  <div align="center">
+    <a href="About.html" name="Back">Back</a>
+  </div>
+
+</body>
+</html>

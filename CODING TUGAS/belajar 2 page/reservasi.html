@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pesan Reservasi</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f1f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .reservasi-box {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .reservasi-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2563eb;
+    }
+
+    .reservasi-box label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #374151;
+    }
+
+    .reservasi-box input,
+    .reservasi-box textarea,
+    .reservasi-box select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 15px;
+      margin-bottom: 14px;
+      transition: 0.3s;
+      outline: none;
+    }
+
+    .reservasi-box input:focus,
+    .reservasi-box textarea:focus,
+    .reservasi-box select:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+    }
+
+    .reservasi-box textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .reservasi-box button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .reservasi-box button:hover {
+      background: #1e40af;
+      transform: scale(1.03);
+    }
+
+    .success {
+      text-align: center;
+      color: #16a34a;
+      font-weight: 600;
+      margin-top: 12px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="reservasi-box">
+    <h2>Form Pesan Reservasi</h2>
+
+    <form id="formReservasi">
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required placeholder="Masukkan nama Anda">
+
+      <label for="wa">Nomor WhatsApp</label>
+      <input type="tel" id="wa" name="wa" required placeholder="Contoh: 6281234567890">
+
+      <label for="tanggal">Tanggal Reservasi</label>
+      <input type="date" id="tanggal" name="tanggal" required>
+
+      <label for="jam">Jam Reservasi</label>
+      <input type="time" id="jam" name="jam" required>
+
+      <label for="jumlah">Jumlah Orang</label>
+      <select id="jumlah" name="jumlah" required>
+        <option value="">Pilih jumlah...</option>
+        <option>1 orang</option>
+        <option>2 orang</option>
+        <option>3 orang</option>
+        <option>4 orang</option>
+        <option>5+ orang</option>
+      </select>
+
+      <label for="pesan">Pesan Tambahan</label>
+      <textarea id="pesan" name="pesan" placeholder="Tulis permintaan khusus (opsional)"></textarea>
+
+      <button type="submit">Kirim Reservasi via WhatsApp</button>
+    </form>
+
+    <div class="success" id="successMsg">✅ Pesan dikirim ke WhatsApp!</div>
+  </div>
+
+  <script>
+    document.getElementById("formReservasi").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nama = encodeURIComponent(document.getElementById("nama").value);
+      const wa = document.getElementById("wa").value;
+      const tanggal = encodeURIComponent(document.getElementById("tanggal").value);
+      const jam = encodeURIComponent(document.getElementById("jam").value);
+      const jumlah = encodeURIComponent(document.getElementById("jumlah").value);
+      const pesan = encodeURIComponent(document.getElementById("pesan").value);
+
+      const text = `Halo, saya ingin melakukan reservasi.%0A%0A` +
+                   `👤 Nama: ${nama}%0A📱 WhatsApp: ${wa}%0A📅 Tanggal: ${tanggal}%0A⏰ Jam: ${jam}%0A👥 Jumlah: ${jumlah}%0A📝 Pesan: ${pesan}`;
+
+      const nomorTujuan = "085866150680"; // Ganti dengan nomor WA penerima
+      const url = `https://wa.me/${nomorTujuan}?text=${text}`;
+
+      window.open(url, "_blank");
+      document.getElementById("successMsg").style.display = "block";
+    });
+  </script>
+</body>
+</html>
