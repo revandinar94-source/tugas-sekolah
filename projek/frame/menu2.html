@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <style>
+        body {
+    background-color: rgb(214, 214, 214);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #1133f7;
+    background-color: #f6f6f6;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100px;
+}
+
+a:hover {
+    background-color: #91df01;
+    color: #fff;
+}
+        body {
+            background-color: lightgray;
+            font-family: Arial, sans-serif;
+        }
+
+        h3 {
+            color: rgb(1, 18, 255);
+        }
+
+        /* Styling dasar untuk link */
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            margin: 8px 0;
+            position: relative;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Animasi garis bawah saat hover */
+        a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            left: 0;
+            bottom: -3px;
+            background-color: rgb(1, 18, 255);
+            transition: width 0.3s ease;
+        }
+
+        /* Efek saat cursor diarahkan */
+        a:hover {
+            color: rgb(1, 18, 255);
+            transform: translateX(5px);
+        }
+
+        a:hover::after {
+            width: 100%;
+        }
+    </style>
+    </style>
+</head>
+<body bgcolor="lightgray">
+    <h3 style="color: rgb(1, 18, 255);">Menu</h3>
+    <a href="konten.html" target="konten">Beranda</a><br>
+    <a href="profil.html" target="konten">Profil</a><br>
+    <a href="kontak.html" target="konten">Kontak</a><br>
+    <a href="megister.html" target="konten">megister</a></br>
+</body>
+</html>

@@ -1,0 +1,25 @@
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fff;
+    }
+    /* Header Navigation */
+    header {
+      background-color: #043658;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      background: 
+      url(https://img.pikbest.com/png-images/20240922/golden-luxury-real-estate-icon-vector-home-or-house-and-building-logo-design_10874932.png!w700wp) 
+    }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign</title>
+    <style>
+        body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-box {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #3b0230;
+    border-radius: 10px;
+    background: #ffffff
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box input {
+    width: 100%;
+    padding:6px;
+    margin: 1px;
+    border: 1px solid #020607;
+    border-radius: 5px;
+}
+
+.login-box button {
+    width: 50px;
+    padding: 7px;
+    margin-top: 10px;
+    background: greenyellow;
+    border: 10px;
+    color: black;
+    border-radius: 1px;
+    cursor: -moz-zoom-in;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffdbdb;
+    background-color: #0382e3;
+    padding: 10px 15px;
+    margin: px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Sign</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Password" required>
+            <input type="text" placeholder="Verifikasi Password" required>
+            <button type="submit">Sign</button>
+        </form>
+    </div>
+</body>
+</html>
