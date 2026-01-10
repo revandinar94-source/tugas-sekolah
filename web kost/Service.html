@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kontak</title>
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+
+    <form>
+        <h2>Kontak</h2>
+
+        <form id="kontakForm">
+
+
+        Nama:<br>
+        <input type="text" name="nama"><br><br>
+
+        Email:<br>
+        <input type="email" name="email"><br><br>
+
+        Pesan:<br>
+        <textarea name="pesan" rows="5"></textarea><br><br>
+
+        <input type="submit" value="Kirim">
+
+        <p>kirim alternatif di bawah jika Error</p>
+         
+
+        <a href="mailto:revandinar94@gmail.com">Kirim Email</a>
+
+
+
+
+
+    </form>
+     
+    <script>
+document.getElementById("kontakForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // mencegah reload
+
+    // ambil nilai input
+    var nama = document.querySelector('input[name="nama"]').value;
+    var email = document.querySelector('input[name="email"]').value;
+    var pesan = document.querySelector('textarea[name="pesan"]').value;
+
+    // validasi
+    if (nama === "" || email === "" || pesan === "") {
+        alert("Mohon lengkapi semua data terlebih dahulu!");
+        return;
+    }
+
+    // format email
+    var tujuan = "revandinar94@gmail.com";
+    var subject = "Pesan dari Website";
+    var body = 
+        "Nama: " + nama + "%0D%0A" +
+        "Email: " + email + "%0D%0A%0D%0A" +
+        "Pesan:%0D%0A" + pesan;
+
+    // buka email client
+    window.location.href = 
+        "mailto:" + tujuan +
+        "?subject=" + subject +
+        "&body=" + body;
+});
+</script>
+
+
+</body>
+</html>

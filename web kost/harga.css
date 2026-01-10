@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    width: 220px;
+}
+
+.search-box button {
+    padding: 7px 12px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+}
+
+.icons span {
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FILTER */
+.filter {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 40px;
+    gap: 10px;
+}
+
+.filter select {
+    padding: 7px;
+}
+
+/* PRODUK */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 20px 40px;
+}
+
+.card {
+    border: 1px solid #eee;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h4 {
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.card h3 {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.rating {
+    color: #f5a623;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+
+    /* NAVBAR / JUDUL */
+    .navbar h2 {
+        font-size: 22px;
+        padding: 15px 0;
+    }
+
+    /* FILTER */
+    .filter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .filter select {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* PRODUK GRID */
+    .products {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    /* CARD */
+    .card {
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card h4 {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #666;
+    }
+
+    .card p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 4px 0;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        margin: 10px 0;
+        color: orange;
+    }
+
+    .rating {
+        font-size: 14px;
+    }
+
+    /* SECTION WA */
+    h2 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    center p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .wa-btn {
+        display: inline-block;
+        background: #25D366;
+        color: white;
+        padding: 14px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+}
+
+/* 📱 HP KECIL */
+@media (max-width: 480px) {
+
+    .navbar h2 {
+        font-size: 20px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .wa-btn {
+        width: 90%;
+        text-align: center;
+    }
+}

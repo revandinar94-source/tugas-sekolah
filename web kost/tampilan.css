@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+}
+
+/* TOPBAR */
+.topbar {
+    background: #0b1f3a;
+    color: #fff;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.topbar a {
+    color: #ffa500;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #fff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.navbar ul li a.active {
+    color: #ffa500;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+    ),
+    url('Screenshot\ 2026-01-09\ 165620.png')
+    center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 60px;
+}
+
+.hero-content {
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 15px 0 30px;
+}
+
+.hero-content .small {
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.btn {
+    background: #ffa500;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: -80px;
+    padding-bottom: 60px;
+}
+
+.card {
+    background: #fff;
+    width: 230px;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card a {
+    background: #ffa500;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+/* garis animasi bawah */
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: orange;
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: darkorange;
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.6);
+}
+
+.features .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.features .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+
+    /* TOP BAR */
+    .topbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        gap: 6px;
+    }
+
+    .sosmed a {
+        margin: 0 6px;
+        font-size: 13px;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+    }
+
+    .navbar .logo {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .navbar ul {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .navbar ul li a {
+        display: block;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    /* HERO */
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero-content .small {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    /* FEATURES */
+    .features {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 15px;
+    }
+
+    .features .card {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .features .card img {
+        width: 60px;
+    }
+
+}
+
+/* HP KECIL */
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
