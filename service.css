@@ -1,0 +1,142 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 25px 30px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        
+        .btn-email {
+    display: inline-block;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #1e90ff, #0056b3);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-email:hover {
+    background: linear-gradient(135deg, #0056b3, #1e90ff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.btn-email:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px;
+    }
+
+    form {
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 12px;
+    }
+
+    form h2 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+        padding: 14px;
+        border-radius: 25px;
+    }
+
+    form p {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+
+    form a {
+        font-size: 15px;
+        padding: 10px 0;
+        display: block;
+    }
+}
+
+/* HP KECIL */
+@media (max-width: 480px) {
+
+    form {
+        padding: 20px 15px;
+    }
+
+    form h2 {
+        font-size: 20px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+}

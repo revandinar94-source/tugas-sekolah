@@ -1,0 +1,88 @@
+.wa-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.wa-btn:hover {
+    background-color: #1ebe5d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #fff;
+}
+
+/* CONTAINER */
+.wa-container {
+    text-align: center;
+    background: #111;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    max-width: 400px;
+    width: 90%;
+}
+
+.wa-container h2 {
+    margin-bottom: 15px;
+    color: #25D366;
+}
+
+.wa-container p {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #ccc;
+}
+
+/* BUTTON WA */
+.wa-btn {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.wa-btn:hover {
+    background: #1ebe5d;
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* RESPONSIVE HP KECIL */
+@media (max-width: 480px) {
+    .wa-container {
+        padding: 30px 20px;
+    }
+
+    .wa-container h2 {
+        font-size: 20px;
+    }
+
+    .wa-btn {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+

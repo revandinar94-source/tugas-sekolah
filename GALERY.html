@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respon</title>
+    <link rel="stylesheet" a href="galery.css">
+</head>
+<body>
+
+    <section class="gallery">
+    <h2>Galeri Kost Bahagia 1</h2>
+
+    <div class="gallery-container">
+        <img src="foto1.jpg" alt="Kost 1">
+        <img src="foto2.jpg" alt="Kost 2">
+        <img src="foto3.jpg" alt="Kost 3">
+        <img src="foto4.jpg" alt="Kost 4">
+        <img src="foto5.jpg" alt="Kost 5">
+    </div>
+    </section>
+
+    <section>
+    <h2>Galeri Kost Bahagia 2</h2>
+    <div class="gallery-container">
+        <img src="foto6.jpg" alt="Kost 1">
+        <img src="foto1.jpg" alt="Kost 2">
+        <img src="foto2.jpg" alt="Kost 3">
+        <img src="foto3.jpg" alt="Kost 4">
+        <img src="foto4.jpg" alt="Kost 5">
+    </div>
+</section>
+
+
+    <center>
+    <h2>Respon cepat lewat WhatsApp</h2>
+    <h3>Mohon maaf web ini dalam percobaan untuk info pemesanan atau Foto kost bisa langsung ke WhatsAp kami</h3>
+    <a href="https://wa.me/085866150680?text=Halo%20saya%20ingin%20booking%20kost"
+    target="_blank" class="wa-btn">
+    Chat WhatsApp
+    </a>
+</center>
+
+<script>
+    const images = document.querySelectorAll(".gallery-container img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    images.forEach(img => {
+        img.onclick = () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        }
+    });
+
+    lightbox.onclick = () => {
+        lightbox.style.display = "none";
+    }
+</script>
+</body>
+</html>
